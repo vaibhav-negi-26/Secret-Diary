@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up - Secret Diary</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container login_form">
+        <div class="col-md-5 sign_up">
+            <!-- Default form login -->
+            <form class="text-center rounded border border-light p-5" action="#!" style="background-color: #ffffff;">
+
+                <p class="h4 mb-4">Sign Up</p>
+
+                <!-- Email -->
+                <div class="md-form">
+                    <input type="text" id="username" class="form-control" required>
+                    <label for="username">Name</label>
+                </div>
+
+                <!-- Email -->
+                <div class="md-form">
+                    <input type="email" id="useremail" class="form-control" required>
+                    <label for="form1">E-mail</label>
+                </div>
+
+                <!-- Password -->
+                <div class="md-form">
+                    <input type="password" id="userpassword" class="form-control" required>
+                    <label for="userpassword">Password</label>
+                    <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                        At least 8 characters and 1 digit
+                    </small>
+                </div>
+                <!--Confirm Password -->
+                <div class="md-form">
+                    <input type="password" id="confirmpass" class="form-control" required>
+                    <label for="confirmpass">Confirm Password</label>
+                </div>
+
+                <div id="error_msg" style="display: none;">
+                    <button class="btn btn-outline-danger rounded">password did not match</button>
+                </div>
+
+                <!-- Sign in button -->
+                <button class="btn rounded btn-info btn-block my-4" type="submit">Sign in</button>
+
+                <!-- Social login -->
+                <p>or sign up with:</p>
+
+                <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+                <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+            </form>
+            <!-- Default form login -->
+        </div>
+    </div>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js">
+    </script>
+    <!-- my java script -->
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>

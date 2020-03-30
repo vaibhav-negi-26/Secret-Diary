@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap');
+
+html {
+    background: #D3CCE3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.4), rgba(33, 147, 176, 0.4)), url("../image/bg-1.jpg");
+    height: 100vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login_form {
+    height: 100vh;
+}
+
+.col-md-5 {
+    position: relative;
+    top: 16%;
+    left: 60%;
+}
+
+.sign_up {
+    position: relative;
+    top: 8%;
+    left: 60%;
+}
+
+form {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Home */
+.main_diary {
+    min-height: 100vh;
+    width: 100%;
+    background: #D3CCE3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title_diary {
+    height: 35vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../image/bg-3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.title_diary h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+}
+
+.diary_card {
+    background-color: #ffffff;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 20px 10px 20px 20px;
+}
+
+.footer {
+    background-color: #ffffff;
+    padding: 10px 5px 5px 5px;
+}
+
+/* diary */
+.main_diary_2 {
+    height: 100%;
+    width: 100%;
+    background: #D3CCE3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title_diary_2 {
+    height: 18vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../image/bg-3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.title_diary_2 h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+}
+
+.purple-border textarea {
+    border: 1px solid #ba68c8;
+}
+
+.purple-border .form-control:focus {
+    border: 1px solid #ba68c8;
+    box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
+}
+
+.green-border-focus .form-control:focus {
+    border: 1px solid #8bc34a;
+    box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, .25);
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+/* .form-group{
+    wid
+} */
+/* mobile */
+@media only screen and (max-width: 600px) {
+    .col-md-5 {
+        top: 16%;
+        left: 0%;
+    }
+
+    .title_diary h1 {
+        font-size: 4rem;
+    }
+
+    .title_diary q {
+        font-size: 0.8rem;
+    }
+
+    .title_diary_2 q {
+        font-size: 0.8rem;
+    }
+    .form-group{
+        padding: 0px 10px;
+    }
+}
