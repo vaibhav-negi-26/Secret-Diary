@@ -10,15 +10,16 @@ const sequelSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
+    },
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User' //this is model name
     }
-    // ,
-    // owner: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     required: true,
-    //     ref: 'User'
-    // }
+},{
+    timestamps: true
 })
 
-const Diary = mongoose.model('Diary',sequelSchema)
+const Diary = mongoose.model('Diary', sequelSchema)
 
 module.exports = Diary

@@ -36,12 +36,23 @@ const UserSchema = new mongoose.Schema({
 })
 
 // virtual schema for linking task and users
-// UserSchema.virtual('sequel', {
-//     ref: 'Diary',
-//     localField: '_id',
-//     foreignField: 'owner'
-// })
+UserSchema.virtual('sequel', {
+    ref: 'Diary',
+    localField: '_id',
+    foreignField: 'owner'
+})
 
+// removing private data from user obj before sending response back to user
+UserSchema.methods.toJSON = function () {
+    const user = this
+    const userObj = user.toObject()
+
+    delete userObj.tokens
+    delete userObj.password
+    delete userObj.__v
+
+    return userObj
+}
 
 // generating auth tokens
 UserSchema.methods.generateAuthToken = async function () {

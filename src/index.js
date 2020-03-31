@@ -18,3 +18,12 @@ app.use(diaryRoute)
 app.listen(port, () => {
     console.log('Server is up at port : ', port)
 })
+
+const User = require('./model/user')
+
+const fun = async () => {
+    const user = await User.findById('5e83b13bdaf1ab78fc56eb8d')
+    await user.populate('sequel').execPopulate()
+    console.log(user.sequel)
+}
+fun()
