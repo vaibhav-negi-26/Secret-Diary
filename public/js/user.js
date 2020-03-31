@@ -20,9 +20,9 @@ app.controller("myLogin", function ($scope, $http, $log, $window) {
         }
         const successCallback = (response) => {
             const user = response.data.user
-            // console.log(user)
+            const token = response.data.token
             const url = '/home.html?name=' + user.name + '&owner=' + user._id
-            // console.log(url)
+            localStorage.setItem("token", token);
             $window.location.href = url;
             // console.log(response.status)
             // $log.info(response)
@@ -83,7 +83,6 @@ app.controller("mySignUp", function ($scope, $http, $log, $window) {
             const user = response.data.user
             const token = response.data.token
             const url = '/home.html?name=' + user.name + '&owner=' + user._id
-            // console.log(url)
             localStorage.setItem("token", token);
             $window.location.href = url;
             // console.log(response.status)
