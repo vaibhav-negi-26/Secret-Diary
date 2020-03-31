@@ -17,23 +17,23 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body ng-app="myApp" ng-controller="myLogin">
 
     <div class="container login_form">
             <div class="col-md-5">
                 <!-- Default form login -->
-                <form class="text-center rounded border border-light p-5" action="#!" style="background-color: #ffffff;">
+                <form class="text-center rounded border border-light p-5" style="background-color: #ffffff;">
                     <p class="h4 mb-4">Sign in</p>
 
                     <!-- Email -->
                     <div class="md-form">
-                        <input type="email" id="useremail" class="form-control" required>
+                        <input type="email" id="useremail" class="form-control" ng-required="true" ng-model="email">
                         <label for="form1">E-mail</label>
                     </div>
 
                     <!-- Password -->
                     <div class="md-form">
-                        <input type="password" id="userpassword" class="form-control" required>
+                        <input type="password" id="userpassword" class="form-control" ng-required="true" ng-model="password">
                         <label for="userpassword">Password</label>
                     </div>
 
@@ -52,7 +52,7 @@
                     </div>
 
                     <!-- Sign in button -->
-                    <button class="btn rounded btn-info btn-block my-4" type="submit">Sign in</button>
+                    <button class="btn rounded btn-info btn-block my-4" type="submit" ng-click="login()">Sign in</button>
 
                     <!-- Register -->
                     <p>Not a member?
@@ -72,6 +72,8 @@
             </div>
     </div>
 
+    <!-- angularJS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -84,7 +86,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js">
     </script>
     <!-- my java script -->
-    <script src=""></script>
+    <script src="./js/user.js"></script>
 
 </body>
 

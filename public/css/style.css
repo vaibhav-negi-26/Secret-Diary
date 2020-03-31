@@ -52,7 +52,7 @@ form {
 }
 
 .title_diary {
-    height: 35vh;
+    height: 20vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../image/bg-3.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@ form {
 
 .title_diary h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 6rem;
+    font-size: 4rem;
 }
 
 .diary_card {
@@ -138,6 +138,20 @@ textarea {
     resize: none;
 }
 
+.nav_diary{
+    padding: 15px 20px 0px;
+}
+.nav_diary a{
+    font-size: 1.25rem;
+    color: crimson;
+    border: 2px solid crimson;
+    padding: 5px 10px ;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.nav_diary a:hover{
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.15);
+}
 /* .form-group{
     wid
 } */

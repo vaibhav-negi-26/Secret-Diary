@@ -17,30 +17,31 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body ng-app="myApp" ng-controller="mySignUp">
 
     <div class="container login_form">
         <div class="col-md-5 sign_up">
             <!-- Default form login -->
-            <form class="text-center rounded border border-light p-5" action="#!" style="background-color: #ffffff;">
+            <form class="text-center rounded border border-light p-5" style="background-color: #ffffff;">
 
                 <p class="h4 mb-4">Sign Up</p>
 
-                <!-- Email -->
+                <!-- Name -->
                 <div class="md-form">
-                    <input type="text" id="username" class="form-control" required>
+                    <input type="text" id="username" class="form-control" ng-required="true" ng-model="name">
                     <label for="username">Name</label>
                 </div>
 
                 <!-- Email -->
                 <div class="md-form">
-                    <input type="email" id="useremail" class="form-control" required>
+                    <input type="email" id="useremail" class="form-control" ng-required="true" ng-model="email">
                     <label for="form1">E-mail</label>
                 </div>
 
                 <!-- Password -->
                 <div class="md-form">
-                    <input type="password" id="userpassword" class="form-control" required>
+                    <input type="password" id="userpassword" class="form-control" ng-required="true"
+                        ng-model="userpassword">
                     <label for="userpassword">Password</label>
                     <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
                         At least 8 characters and 1 digit
@@ -48,7 +49,8 @@
                 </div>
                 <!--Confirm Password -->
                 <div class="md-form">
-                    <input type="password" id="confirmpass" class="form-control" required>
+                    <input type="password" id="confirmpass" class="form-control" ng-required="true"
+                        ng-model="confirmpass">
                     <label for="confirmpass">Confirm Password</label>
                 </div>
 
@@ -57,7 +59,7 @@
                 </div>
 
                 <!-- Sign in button -->
-                <button class="btn rounded btn-info btn-block my-4" type="submit">Sign in</button>
+                <button class="btn rounded btn-info btn-block my-4" type="submit" ng-click="signup()">Sign in</button>
 
                 <!-- Social login -->
                 <p>or sign up with:</p>
@@ -72,10 +74,12 @@
         </div>
     </div>
 
+    <!-- angularJS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"> -->
     </script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript"
@@ -84,7 +88,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js">
     </script>
     <!-- my java script -->
-    <script src="./js/signup.js"></script>
+    <script src="./js/user.js"></script>
 </body>
 
 </html>

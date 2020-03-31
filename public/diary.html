@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diary</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- Bootstrap core CSS -->
@@ -18,13 +16,16 @@
 </head>
 
 <body>
-
     <section class="main_diary_2">
         <div class="title_diary_2">
             <h1>Secret Diary</h1>
             <q>If you want to keep a secret, you must also hide it from yourself.</q>
         </div>
-        <div class="container mt-4">
+        <div class="container-fluid nav_diary d-flex justify-content-between">
+            <a href="#">Sign Out 👋</a>
+            <a href="#">Save and go back🤫</a>
+        </div>
+        <div class="container">
             <div class="row">
                 <div class="form-group purple-border w-75" >
                     <label class="lead" for="title_diary">Title of Your Sequela</label>
@@ -32,7 +33,7 @@
                         placeholder="please try to use 10 words🤞"></textarea>
                 </div>
             </div>
-            <div class="row" style="height: 65vh;">
+            <div class="row" style="height: 60vh;">
                 <div class="form-group purple-border w-100">
                     <label class="lead" for="content-diary">Express your fellings...🤗</label>
                     <textarea class="form-control" id="content-diary" style="height: 90% !important;"></textarea>
@@ -40,6 +41,7 @@
             </div>
         </div>
     </section>
+
     <div class="container-fluid footer">
         <p class="w-100 text-center lead">
             Created by Vaibhav Singh Negi
