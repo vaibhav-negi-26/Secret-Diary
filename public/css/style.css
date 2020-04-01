@@ -219,8 +219,11 @@ textarea {
         font-size: 0.8rem;
     }
 
+    .title_diary_2 h1 {
+        font-size: 3rem;
+    }
     .title_diary_2 q {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
     }
     .form-group{
         padding: 0px 10px;
@@ -228,5 +231,8 @@ textarea {
     .nav_diary{
         padding: 0px 10px;
         margin: 20px 0px;
+    }
+    .footer {
+        margin-top: 40%;
     }
 }
