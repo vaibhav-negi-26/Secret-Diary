@@ -153,7 +153,9 @@ app.controller('diaryNew', function ($scope, $http, $log, $window) {
 
     ///////////////////////////////////////////////////////////////// signout function
     $scope.signout = () => {
-        loader.fadeIn()
+        loader.fadeIn('fast')
+        main_diary.fadeOut()
+        footer.fadeOut()
         const successCallback = (response) => {
             localStorage.removeItem("token");
             $window.location.href = '/'
