@@ -207,10 +207,21 @@ textarea {
 /* mobile */
 @media only screen and (max-width: 600px) {
     .col-md-5 {
-        top: 16%;
-        left: 0%;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        display: flex;
+        padding: 0px !important;
+        justify-content: center;
+        align-items: center;
     }
-
+    .col-md-5 form{
+        padding: 20px;
+        width: 100%;
+    }
+    .remember{
+        font-size: 1rem !important;
+    }
     .title_diary h1 {
         font-size: 3.5rem;
     }
@@ -233,6 +244,6 @@ textarea {
         margin: 20px 0px;
     }
     .footer {
-        margin-top: 40%;
+        margin-top: 35%;
     }
 }
