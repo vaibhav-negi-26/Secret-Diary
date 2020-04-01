@@ -2,12 +2,15 @@ const express = require('express')
 const router = new express.Router()
 const User = require('../model/user')
 const auth = require('../middleware/auth')
+const {sendWelcome} = require('../emails/account')
+
 // Create and login endpoints 
 router.post('/users/create', async (req, res) => {
     const user = new User(req.body)
     try {
         await user.save()
         const token = await user.generateAuthToken()
+        sendWelcome(user.email,user.name)
         res.status(201).send({
             user,
             token

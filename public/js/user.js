@@ -3,8 +3,8 @@ var app = angular.module("myApp", []);
 // login controller
 app.controller("myLogin", function ($scope, $http, $log, $window) {
 
-    $scope.email = 'admin@gmail.com'
-    $scope.password = 'vaibhav@26'
+    $scope.email
+    $scope.password
     $scope.login = function () {
         if ($scope.email === undefined || $scope.password === undefined) {
             return console.log("Email or password is empty.")
@@ -21,13 +21,13 @@ app.controller("myLogin", function ($scope, $http, $log, $window) {
         const successCallback = (response) => {
             const user = response.data.user
             const token = response.data.token
-            const url = '/home.html?name=' + user.name + '&owner=' + user._id
             localStorage.setItem("token", token);
-            $window.location.href = url;
+            $window.location.href = '/home.html';
             // console.log(response.status)
             // $log.info(response)
         }
         const errorCallback = (response) => {
+            alert("Wrong Email or Password")
             console.log("Wrong Email or Password")
             // console.log(response.status)
             // $log.info(response)
@@ -35,15 +35,37 @@ app.controller("myLogin", function ($scope, $http, $log, $window) {
         $http(req).then(successCallback, errorCallback)
     }
 
+    // getting token form localstorage
+    const token = localStorage.getItem("token");
+
+    ///////////////////////////////////////////////////////////////// checking authentication
+    const success = (response) => {
+        $window.location.href = '/home.html'
+        // console.log(response.status)
+        // $log.info(response)
+    }
+    const error = (response) => {
+        console.log('Please Login')
+        // $log.info(response)
+    }
+    $http({
+        method: 'GET',
+        url: '/users/me',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + token
+        }
+    }).then(success, error)
+
 });
 
 // signup controller
 app.controller("mySignUp", function ($scope, $http, $log, $window) {
 
-    $scope.name = 'admin'
-    $scope.email = 'abc@gmail.com'
-    $scope.userpassword = 'admin@26'
-    $scope.confirmpass = 'admin@26'
+    $scope.name
+    $scope.email
+    $scope.userpassword
+    $scope.confirmpass
     const error_msg = $('#error_msg')
 
     const checker = function () {
@@ -53,8 +75,8 @@ app.controller("mySignUp", function ($scope, $http, $log, $window) {
             return true
         } else {
             error_msg.toggle('slow')
-            pass.val('')
-            confirm_pass.val('')
+            $scope.userpassword = ''
+            $scope.confirmpass = ''
             return false
         }
     }
@@ -82,9 +104,8 @@ app.controller("mySignUp", function ($scope, $http, $log, $window) {
         const successCallback = (response) => {
             const user = response.data.user
             const token = response.data.token
-            const url = '/home.html?name=' + user.name + '&owner=' + user._id
             localStorage.setItem("token", token);
-            $window.location.href = url;
+            $window.location.href = '/home.html';
             // console.log(response.status)
             // $log.info(response)
         }

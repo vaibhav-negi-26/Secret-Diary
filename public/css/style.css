@@ -143,18 +143,67 @@ textarea {
 }
 .nav_diary a{
     font-size: 1.25rem;
-    color: crimson;
+    color: crimson !important;
     border: 2px solid crimson;
     padding: 5px 10px ;
     border-radius: 20px;
     font-weight: bold;
 }
+.nav_diary .save{
+    color: #00c851 !important;
+    border: 2px solid #00c851 !important;
+}
 .nav_diary a:hover{
     box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.15);
 }
-/* .form-group{
-    wid
-} */
+
+/* loader */
+/* Demo */
+.wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #ECE9E6, #FFFFFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+/* Animation */
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+   }
+}
+/* Variables */
+/* Loading Icon */
+.loading {
+    width: 100px;
+    height: 100px;
+}
+.loading__ring {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.loading__ring:first-child {
+    transform: skew(30deg, 20deg);
+}
+.loading__ring:last-child {
+    transform: skew(-30deg, -20deg) scale(-1, 1);
+}
+.loading__ring:last-child svg {
+    animation-delay: -0.5s;
+}
+.loading__ring svg {
+    animation: rotate 1s linear infinite;
+    fill: rgba(0, 0, 0, 0.2);
+}
+
+
+
 /* mobile */
 @media only screen and (max-width: 600px) {
     .col-md-5 {
@@ -175,5 +224,9 @@ textarea {
     }
     .form-group{
         padding: 0px 10px;
+    }
+    .nav_diary{
+        padding: 0px 10px;
+        margin: 20px 0px;
     }
 }
